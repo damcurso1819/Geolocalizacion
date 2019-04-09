@@ -23,8 +23,12 @@ import com.google.android.gms.tasks.OnSuccessListener;
 
 public class MainActivity extends AppCompatActivity {
 
+    //User location:
     //https://developer.android.com/training/location
+    //Example:
     //https://github.com/googlesamples/android-play-location/blob/master/LocationUpdates/app/src/main/java/com/google/android/gms/location/sample/locationupdates/MainActivity.java
+    //Permissions:
+    //https://developer.android.com/guide/topics/permissions/overview
 
     private static final int PERMISO_GPS = 1;
     public static final String TAG = MainActivity.class.getSimpleName();
@@ -99,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
                     tvDos.setText("longitud " + location.getLongitude());
                     ultimaPosicion.setLatitude(37.161262);
                     ultimaPosicion.setLongitude(-3.5922742);
-
+                    requestAddress(ultimaPosicion);
                 } else {
                     Log.v(TAG, "última Location es null");
                 }
